@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tijil | JEE Aspirant</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg: #0f0f0f;
+    --card-bg: #1c1c1c;
+    --text: #f0f0f0;
+    --accent: #8a2be2;
+    --accent-light: #bb86fc;
+    --shadow: rgba(138,43,226,0.5);
+}
+
+/* General Styles */
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:var(--bg);color:var(--text);scroll-behavior:smooth;}
+
+/* Navigation */
+nav{
+    position:fixed;top:0;left:0;right:0;
+    display:flex;justify-content:center;gap:2rem;
+    background:rgba(20,20,20,0.95);padding:1rem;z-index:1000;
+}
+nav a{text-decoration:none;color:var(--text);font-weight:600;transition:0.3s;}
+nav a:hover{color:var(--accent-light);}
+
+/* Header */
+header{
+    height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;
+    background: linear-gradient(135deg,#0f0f0f,#1c1c1c);
+}
+header h1{
+    font-size:4rem;color:var(--accent);
+    text-shadow:0 0 20px var(--accent-light),0 0 40px var(--accent);
+    animation:glow 2s infinite alternate;
+}
+header p{
+    margin-top:1rem;font-size:1.2rem;color:#ccc;
+    opacity:0;
+    animation:fadeIn 2s forwards 1s;
+}
+
+/* Animations */
+@keyframes glow{
+    0% {text-shadow:0 0 10px var(--accent-light),0 0 20px var(--accent);}
+    100% {text-shadow:0 0 20px var(--accent-light),0 0 40px var(--accent);}
+}
+@keyframes fadeIn{
+    to {opacity:1;}
+}
+
+/* Sections */
+section{padding:6rem 2rem;max-width:1000px;margin:auto;}
+section h2{text-align:center;margin-bottom:2rem;font-size:2.5rem;color:var(--accent);text-shadow:0 0 10px var(--shadow);}
+.card{background:var(--card-bg);padding:2rem;border-radius:15px;box-shadow:0 0 20px var(--shadow);margin-bottom:2rem;transition:transform 0.3s;}
+.card:hover{transform:translateY(-10px);}
+
+/* Progress Bars */
+.progress-bar{background:#2a2a2a;border-radius:10px;overflow:hidden;margin-top:0.5rem;}
+.progress{height:15px;background:var(--accent);width:0%;border-radius:10px;transition:width 1s;}
+
+/* Neon Button */
+.button-container{
+    display:flex;
+    justify-content:center;
+    margin-top:1rem;
+}
+.button {
+    padding: 1rem 2rem;
+    background: linear-gradient(45deg, #8a2be2, #bb86fc);
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 0 10px #8a2be2, 0 0 20px #bb86fc;
+    transition: all 0.3s ease;
+}
+.button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px #8a2be2, 0 0 40px #bb86fc;
+}
+.button:active {
+    transform: translateY(0);
+    box-shadow: 0 0 5px #8a2be2, 0 0 10px #bb86fc;
+}
+
+/* Footer */
+footer{text-align:center;padding:2rem;background:#111;color:#888;}
+
+/* Responsive */
+@media (max-width:768px){
+    header h1{font-size:3rem;}
+    section h2{font-size:2rem;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+    <a href="#website">My Website</a>
+    <a href="#about">About</a>
+    <a href="#progress">Progress</a>
+    <a href="#dream">IIT Dream</a>
+</nav>
+
+<header>
+    <h1>Tijil</h1>
+    <p>JEE Aspirant | Future IIT Bombay Student</p>
+</header>
+
+<section id="website" class="card">
+    <h2>Website</h2>
+    <p>PrepBoosters: A JEE prep platform offering curated resources, practice materials, and guides for efficient, structured, and interactive learning.</p>
+    <div class="button-container">
+        <a href="https://prepboosters.vercel.app" class="button">My Website</a>
+    </div>
+</section>
+
+<section id="about" class="card">
+    <h2>About Me</h2>
+    <p>Hi! I'm Tijil, an ambitious student preparing for JEE with full dedication. I love exploring complex problems in Physics, Chemistry, and Mathematics. Alongside academics, I enjoy coding and building web projects to strengthen my technical skills. My focus is to balance preparation with creativity and consistent learning.</p>
+</section>
+
+<section id="progress">
+    <h2>My JEE Progress</h2>
+    <div class="card">
+        <h3>Mathematics</h3>
+        <div class="progress-bar"><div class="progress" style="width:75%"></div></div>
+    </div>
+    <div class="card">
+        <h3>Physics</h3>
+        <div class="progress-bar"><div class="progress" style="width:70%"></div></div>
+    </div>
+    <div class="card">
+        <h3>Chemistry</h3>
+        <div class="progress-bar"><div class="progress" style="width:65%"></div></div>
+    </div>
+</section>
+
+<section id="dream" class="card">
+    <h2>My IIT Dream</h2>
+    <p>My ultimate goal is to secure a seat at IIT Bombay, one of the top engineering institutes in India. I am committed to consistent preparation, conceptual clarity, and smart strategies. This journey represents my passion for excellence and my determination to achieve both academic and personal growth.</p>
+</section>
+
+<footer>
+    &copy; 2025 Tijil. All Rights Reserved.
+</footer>
+
+<script>
+    // Animate progress bars on scroll
+    const progressBars = document.querySelectorAll('.progress');
+    window.addEventListener('scroll', ()=>{
+        const triggerPoint = window.innerHeight * 0.8;
+        progressBars.forEach(bar=>{
+            const top = bar.getBoundingClientRect().top;
+            if(top < triggerPoint){
+                bar.style.width = bar.style.width; // initial width set inline
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
