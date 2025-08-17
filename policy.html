@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy</title>
+    <style>
+        :root {
+            --dark-bg: #121212;
+            --darker-bg: #1e1e1e;
+            --neon-purple: #bb86fc;
+            --neon-cyan: #03dac6;
+            --neon-pink: #ff2a6d;
+            --text-glow: 0 0 10px var(--neon-purple);
+        }
+        
+        body {
+            background-color: var(--dark-bg);
+            color: #ffffff;
+            font-family: 'Rajdhani', 'Segoe UI', sans-serif;
+            line-height: 1.8;
+            padding: 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+            background-image: 
+                radial-gradient(circle at 25% 25%, rgba(187, 134, 252, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 75% 75%, rgba(3, 218, 198, 0.1) 0%, transparent 50%);
+        }
+        
+        h1 {
+            color: var(--neon-purple);
+            font-size: 2.5rem;
+            text-shadow: var(--text-glow);
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--neon-purple), var(--neon-cyan));
+            box-shadow: 0 0 15px var(--neon-purple);
+        }
+        
+        h2 {
+            color: var(--neon-cyan);
+            font-size: 1.8rem;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 5px rgba(3, 218, 198, 0.7);
+            position: relative;
+            padding-left: 15px;
+        }
+        
+        h2::before {
+            content: '>';
+            position: absolute;
+            left: -5px;
+            color: var(--neon-pink);
+            text-shadow: 0 0 10px var(--neon-pink);
+        }
+        
+        p {
+            margin-bottom: 1.5rem;
+            color: #e0e0e0;
+        }
+        
+        .last-updated {
+            color: var(--neon-cyan);
+            font-style: italic;
+            margin-bottom: 2rem;
+            display: block;
+        }
+        
+        .back-btn {
+            display: inline-block;
+            margin-top: 3rem;
+            padding: 12px 25px;
+            background: linear-gradient(135deg, var(--neon-purple), var(--neon-cyan));
+            color: #000;
+            border: none;
+            border-radius: 4px;
+            font-weight: 700;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(187, 134, 252, 0.5);
+        }
+        
+        .back-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 25px rgba(187, 134, 252, 0.8);
+        }
+        
+        /* Cyberpunk scanline effect */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                rgba(18, 18, 18, 0) 50%, 
+                rgba(0, 0, 0, 0.25) 50%
+            );
+            background-size: 100% 4px;
+            pointer-events: none;
+            z-index: 1000;
+            opacity: 0.15;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 1.5rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>PRIVACY POLICY</h1>
+    <span class="last-updated">Last updated: August 17, 2025</span>
+
+    <h2>1. About This Website</h2>
+    <p>This is a personal portfolio website created by Tijil to showcase skills, projects, and related information. It is not a commercial service or business platform.</p>
+    
+    <h2>2. Information Collection</h2>
+    <p>This website does not actively collect personal information from visitors. If you choose to contact me via email or form, your details will only be used to respond to your inquiry.</p>
+    
+    <h2>3. Cookies & Analytics</h2>
+    <p>Basic analytics tools may be used to understand website traffic and improve user experience. These may involve cookies, which you can disable in your browser settings.</p>
+    
+    <h2>4. Third-Party Services</h2>
+    <p>If services like Google Adsense or Analytics are used, they may collect data in line with their own privacy policies.</p>
+    
+    <h2>5. Data Usage</h2>
+    <p>Any information voluntarily shared will only be used for communication and will never be sold or misused.</p>
+    
+    <h2>6. Updates</h2>
+    <p>This Privacy Policy may be updated from time to time. Please review it periodically for any changes.</p>
+    
+    <h2>7. Contact</h2>
+    <p>If you have questions about this policy, you can reach out at: <strong>your-email@example.com</strong></p>
+
+    <a href="index.html" class="back-btn">← BACK TO HOME</a>
+</body>
+</html>
